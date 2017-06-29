@@ -32,6 +32,5 @@ public class IntrumentedTest {
     public void writeToFile() throws IOException {
         Io.writeToFile(instrumentationCtx,"TEST", "file.txt");
 
-
     }
 }
