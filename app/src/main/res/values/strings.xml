@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Money counter</string>
+    <string name="title_activity_toast">ToastActivity</string>
+    <string name="file_name">money.txt</string>
+    <string name="zero">0</string>
+    <string name="twenty">20</string>
+    <string name="ten">10</string>
+    <string name="five">5</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="pointfive">0.5</string>
+    <string name="substract">substract</string>
+    <string name="add">add</string>
+    <string name="x">X</string>
+    <string name="reset">Reset</string>
+    <string name="currency">DKK</string>
+    <string name="error_wrong_nfc">This is not the NFC chip you\'re looking for</string>
+</resources>

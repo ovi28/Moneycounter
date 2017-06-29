@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.counter.test.moneycounter.MainActivity">
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/zero"
+        android:id="@+id/tvTotal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center" />
+
+    <TextView
+        android:id="@+id/tvTwenty"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tvTotal"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/bSubTwenty"
+        android:layout_toRightOf="@+id/bSubTwenty"
+        android:gravity="center_vertical|center"
+        android:text="@string/zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTen"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/tvTwenty"
+        android:layout_alignLeft="@+id/tvTwenty"
+        android:layout_alignRight="@+id/tvTwenty"
+        android:layout_alignStart="@+id/tvTwenty"
+        android:layout_below="@+id/tvTwenty"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|center"
+        android:text="@string/zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvFive"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/tvTen"
+        android:layout_alignRight="@+id/tvTen"
+        android:layout_below="@+id/tvTen"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/bSubFive"
+        android:layout_toRightOf="@+id/bSubFive"
+        android:gravity="center_vertical|center"
+        android:text="@string/zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTwo"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/tvFive"
+        android:layout_alignRight="@+id/tvFive"
+        android:layout_below="@+id/tvFive"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/bSubTwo"
+        android:layout_toRightOf="@+id/bSubTwo"
+        android:gravity="center_vertical|center"
+        android:text="@string/zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvOne"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/tvTwo"
+        android:layout_alignLeft="@+id/tvTwo"
+        android:layout_alignRight="@+id/tvTwo"
+        android:layout_alignStart="@+id/tvTwo"
+        android:layout_below="@+id/tvTwo"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|center"
+        android:text="@string/zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvPointFive"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/tvOne"
+        android:layout_alignRight="@+id/tvOne"
+        android:layout_below="@+id/tvOne"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/bSubPointFive"
+        android:layout_toRightOf="@+id/bSubPointFive"
+        android:gravity="center_vertical|center"
+        android:text="@string/zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/substract"
+        android:id="@+id/bSubTwenty"
+        android:onClick="subMoney"
+        android:layout_above="@+id/tvTen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/tvTotal"
+        android:layout_toStartOf="@+id/tvTotal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/substract"
+        android:id="@+id/bSubTen"
+        android:layout_above="@+id/tvFive"
+        android:onClick="subMoney"
+        android:layout_alignRight="@+id/bSubTwenty"
+        android:layout_alignEnd="@+id/bSubTwenty"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/substract"
+        android:id="@+id/bSubFive"
+        android:layout_above="@+id/tvTwo"
+        android:onClick="subMoney"
+        android:layout_alignRight="@+id/bSubTen"
+        android:layout_alignEnd="@+id/bSubTen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/substract"
+        android:id="@+id/bSubTwo"
+        android:onClick="subMoney"
+        android:layout_above="@+id/tvOne"
+        android:layout_alignRight="@+id/bSubFive"
+        android:layout_alignEnd="@+id/bSubFive"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/substract"
+        android:id="@+id/bSubOne"
+        android:onClick="subMoney"
+        android:layout_above="@+id/tvPointFive"
+        android:layout_alignRight="@+id/bSubTwo"
+        android:layout_alignEnd="@+id/bSubTwo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/substract"
+        android:id="@+id/bSubPointFive"
+        android:layout_alignBottom="@+id/tvPointFive"
+        android:onClick="subMoney"
+        android:layout_alignRight="@+id/bSubOne"
+        android:layout_alignEnd="@+id/bSubOne"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:id="@+id/bAddTwenty"
+        android:onClick="addMoney"
+        android:layout_alignBottom="@+id/tvTwenty"
+        android:layout_alignRight="@+id/bAddTen"
+        android:layout_alignEnd="@+id/bAddTen"
+        android:layout_alignLeft="@+id/bAddOne"
+        android:layout_alignStart="@+id/bAddOne" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:id="@+id/bAddTen"
+        android:onClick="addMoney"
+        android:layout_above="@+id/tvFive"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/bAddOne"
+        android:layout_alignStart="@+id/bAddOne" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:onClick="addMoney"
+        android:id="@+id/bAddFive"
+        android:layout_above="@+id/tvTwo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/bAddTen"
+        android:layout_alignStart="@+id/bAddTen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:id="@+id/bAddTwo"
+        android:onClick="addMoney"
+        android:layout_above="@+id/tvOne"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/bAddOne"
+        android:layout_alignStart="@+id/bAddOne" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:id="@+id/bAddOne"
+        android:onClick="addMoney"
+        android:layout_alignBottom="@+id/bSubOne"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/bAddPointFive"
+        android:layout_alignStart="@+id/bAddPointFive" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:id="@+id/bAddPointFive"
+        android:onClick="addMoney"
+        android:layout_alignBottom="@+id/tvPointFive"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/tvTotal"
+        android:layout_toEndOf="@+id/tvTotal" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x"
+        android:id="@+id/tvMultiply20"
+        android:gravity="center_vertical|right"
+        android:layout_alignTop="@+id/tvTwenty"
+        android:layout_toRightOf="@+id/tvTwenty"
+        android:layout_toEndOf="@+id/tvTwenty" />
+
+    <TextView
+        android:id="@+id/tvAmountTwenty"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/tvMultiply20"
+        android:layout_toEndOf="@+id/tvMultiply20"
+        android:layout_toRightOf="@+id/tvMultiply20"
+        android:gravity="left|center_vertical"
+        android:text="@string/twenty"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x"
+        android:id="@+id/tvMultiply10"
+        android:gravity="center_vertical|right"
+        android:layout_alignBottom="@+id/bAddTen"
+        android:layout_alignLeft="@+id/tvMultiply20"
+        android:layout_alignStart="@+id/tvMultiply20" />
+
+    <TextView
+        android:id="@+id/tvAmountTen"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/bAddTen"
+        android:layout_toEndOf="@+id/tvMultiply10"
+        android:layout_toRightOf="@+id/tvMultiply10"
+        android:gravity="left|center_vertical"
+        android:text="@string/ten"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x"
+        android:id="@+id/tvMultiplyFive"
+        android:gravity="center_vertical|right"
+        android:layout_alignBottom="@+id/tvFive"
+        android:layout_toRightOf="@+id/tvFive"
+        android:layout_toEndOf="@+id/tvFive" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x"
+        android:id="@+id/tvMultiplyTwo"
+        android:gravity="center_vertical|right"
+        android:layout_above="@+id/tvOne"
+        android:layout_toRightOf="@+id/tvTwo"
+        android:layout_toEndOf="@+id/tvTwo" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x"
+        android:id="@+id/tvMultiplyOne"
+        android:gravity="center_vertical|right"
+        android:layout_above="@+id/tvPointFive"
+        android:layout_toRightOf="@+id/tvOne"
+        android:layout_toEndOf="@+id/tvOne" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x"
+        android:id="@+id/tvMultiplyPointFive"
+        android:gravity="center_vertical|right"
+        android:layout_alignBottom="@+id/bAddPointFive"
+        android:layout_toRightOf="@+id/tvPointFive"
+        android:layout_toEndOf="@+id/tvPointFive" />
+
+    <TextView
+        android:id="@+id/tvAmountFive"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/tvTwo"
+        android:layout_toEndOf="@+id/tvMultiplyFive"
+        android:layout_toRightOf="@+id/tvMultiplyFive"
+        android:gravity="left|center_vertical"
+        android:text="@string/five"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvAmountTwo"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/tvOne"
+        android:layout_toEndOf="@+id/tvMultiplyTwo"
+        android:layout_toRightOf="@+id/tvMultiplyTwo"
+        android:gravity="left|center_vertical"
+        android:text="@string/two"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvAmountOne"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:gravity="left|center_vertical"
+        android:text="@string/one"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignBottom="@+id/bAddOne"
+        android:layout_toRightOf="@+id/tvMultiplyOne"
+        android:layout_toEndOf="@+id/tvMultiplyOne" />
+
+    <TextView
+        android:id="@+id/tvAmountPointFive"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/tvMultiplyPointFive"
+        android:layout_toEndOf="@+id/tvMultiplyPointFive"
+        android:layout_toRightOf="@+id/tvMultiplyPointFive"
+        android:gravity="left|center_vertical"
+        android:text="@string/pointfive"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="reset"
+        android:text="@string/reset" />
+
+</RelativeLayout>
